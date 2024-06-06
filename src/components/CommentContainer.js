@@ -28,10 +28,11 @@ export const SingleComment = ({ commentData }) => {
 const CommentList = ({ commentData }) => {
     return commentData.map(data => 
     ( <div> <SingleComment key={data.it} commentData={data} />
-   
-      <div className='ml-3 p-5'>
-      <CommentList key={data.it} commentData={data.reples}/>
-              </div>  </div>)
+         {data.replies && <div className='ml-3 p-5 border border-l-black'>
+            {console.log(data.replies)}
+            <CommentList key={data.it+data.userId} commentData={data.replies}/>
+                </div> }
+     </div>)
 )
 }
 const commentData = [
@@ -47,7 +48,13 @@ const commentData = [
             "it": 7,
             "title": "but the great easy",
             "body": "may it please some with pain that the things of life\nfor the great who are the ones who are whom no one or often\nwill repulse them because\nthey are to follow them but those which"
-}
+           ,"replies": [{
+            "userId": 1,
+            "name": "Frank", // Added random name
+            "it": 6,
+            "title": "I will open them to great pain because",
+            "body": " life that things should be followed; no pain will blame the blessed ones; nor will they"}], 
+        }
         ]
     },
     {
@@ -63,6 +70,20 @@ const commentData = [
         "it": 3,
         "title": "she repels troubles as if she were training, whoever she is",
         "body": "and just but by what right\nthe lust of every one who chooses to be blinded, or to\nthe lust of pains or accusers, who is spared\nhis pains further by his hatred and labor and wants or"
+         ,"replies": [
+            { "userId": 1,
+             "name": "Grace", // Added random name
+             "it": 7,
+             "title": "but the great easy",
+             "body": "may it please some with pain that the things of life\nfor the great who are the ones who are whom no one or often\nwill repulse them because\nthey are to follow them but those which"
+            ,"replies": [{
+             "userId": 1,
+             "name": "Frank", // Added random name
+             "it": 6,
+             "title": "I will open them to great pain because",
+             "body": " life that things should be followed; no pain will blame the blessed ones; nor will they"}], 
+         }
+         ]     
     },
     {
         "userId": 1,
@@ -83,7 +104,7 @@ const commentData = [
         "name": "Frank", // Added random name
         "it": 6,
         "title": "I will open them to great pain because",
-        "body": ""
+        "body": " life that things should be followed; no pain will blame the blessed ones; nor will they"
     },
     {
         "userId": 1,
