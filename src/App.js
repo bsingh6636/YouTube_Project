@@ -24,7 +24,7 @@ function App() {
   return (
     <Provider store={store}>
     <div className="">
-     <h1 className='text-green-700 bg-black'>Brijesh back on React</h1>
+     
      <Head/>
      <RouterProvider router={appRouter}/>
     </div>
