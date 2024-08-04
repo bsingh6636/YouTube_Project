@@ -42,7 +42,7 @@ const Head = () => {
         <img onClick={() => {
           toggleMenuHandler()
         }} className='h-8 cursor-pointer' src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png' alt='hamburger menu'></img>
-    <Link to ='/'>  <img className='h-8 mx-2' src='https://www.freeiconspng.com/thumbs/youtube-logo-png/hd-youtube-logo-png-transparent-background-20.png' alt='youtube logo'></img> </Link> 
+    <img className='h-8 mx-2' src='https://www.freeiconspng.com/thumbs/youtube-logo-png/hd-youtube-logo-png-transparent-background-20.png' alt='youtube logo'></img>
       </div>
       <div className='col-span-10 px-10 text-center'>
         <div>
