@@ -26,7 +26,7 @@ function App() {
     <div className="">
      
      <Head/>
-     <RouterProvider router={appRouter}/>
+     <RouterProvider router={appRouter}></RouterProvider>
     </div>
     </Provider>
   );

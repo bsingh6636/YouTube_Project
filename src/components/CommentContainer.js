@@ -29,7 +29,7 @@ const CommentList = ({ commentData }) => {
     return commentData.map(data => 
     ( <div> <SingleComment key={data.it} commentData={data} />
          {data.replies && <div className='ml-3 p-5 border border-l-black'>
-            {console.log(data.replies)}
+          
             <CommentList key={data.it+data.userId} commentData={data.replies}/>
                 </div> }
      </div>)
